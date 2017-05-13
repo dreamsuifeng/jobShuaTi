@@ -1,5 +1,6 @@
 package LeetCode;
 import java.lang.Math;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -13,8 +14,10 @@ public class MaxPointsonaLine {
 		  }
 	private int res=0;
 	private HashMap<String, Double> xielu=new HashMap<>();
+	private int parisValue=0;
 // compute max count one line counts	
 	public int maxPoints(Point[] points) {
+		
 		int n=points.length;
 		if (n==0 || n==1 ||n==2){
 		    return n;
@@ -22,16 +25,9 @@ public class MaxPointsonaLine {
         for (int i=0;i<n;++i){
         	Map<Double, Integer> map=new HashMap<>();
         	int rest=0;
-        	Set<String> used=new HashSet<>();
-        	used.add(points[i].x+","+points[i].y);
+        	int duplicateds=0;
         	for (int j=0; j<n;++j){
         		if (j==i) continue;
-//        		if (used.contains((points[j].x+","+points[j].y))){
-//        			rest++;
-//        			continue;
-//        		}else{
-//        			used.add(points[j].x+","+points[j].y);
-//        		}
         		String temp=Integer.toString(i)+Integer.toString(j);
         		String temp2=Integer.toString(j)+Integer.toString(i);
         		if (xielu.containsKey(temp)){
@@ -50,7 +46,8 @@ public class MaxPointsonaLine {
         				xieluTmp=(points[j].y-points[i].y)*1.0/(points[j].x-points[i].x);
         			}else{
         				if(points[j].x==points[i].x && points[j].y==points[i].y){
-        					
+        					duplicateds++;
+        					continue;
         				}
         				else xieluTmp=Double.MAX_VALUE;
         			}
@@ -63,8 +60,11 @@ public class MaxPointsonaLine {
         				map.put(xieluTmp, 2);
         			}
         			int t=map.get(xieluTmp);
+        			
     				rest = rest<t ? t:rest;
         		}
+        		
+        		rest+=duplicateds;
         	}
         	res=res<rest ? rest:res;
         }
