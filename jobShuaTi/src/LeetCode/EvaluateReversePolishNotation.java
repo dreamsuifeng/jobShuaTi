@@ -13,7 +13,7 @@ public class EvaluateReversePolishNotation {
 	        	}else if (s.equals("-")){
 	        		int s1=Integer.parseInt(stack.pop());
 	        		int s2=Integer.parseInt(stack.pop());
-	        		stack.push(String.valueOf(s1-s2));
+	        		stack.push(String.valueOf(s2-s1));
 	        	}else if (s.equals("*")){
 	        		int s1=Integer.parseInt(stack.pop());
 	        		int s2=Integer.parseInt(stack.pop());
@@ -21,7 +21,7 @@ public class EvaluateReversePolishNotation {
 	        	}else if (s.equals("/")){
 	        		int s1=Integer.parseInt(stack.pop());
 	        		int s2=Integer.parseInt(stack.pop());
-	        		stack.push(String.valueOf(s1/s2));
+	        		stack.push(String.valueOf(s2/s1));
 	        	}else{
 	        		stack.push(s);
 	        	}

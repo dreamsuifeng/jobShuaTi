@@ -45,9 +45,27 @@ public class ReorderList {
 		while (q!=null && q.next!=null){
 			p.next=q.next;
 			p=q;
-			q=q.next.next;
+			q=q.next;
 		}
+		p.next=null;
+		ListNode t=head;
+		while (t!=null){
+		    System.out.print(t.val+",");
+		    t=t.next;
+		}
+		System.out.println();
+		t=head2;
+		while (t!=null){
+		    System.out.print(t.val+",");
+		    t=t.next;
+		}
+		System.out.println();
 		head2=reverse(head2);
+		t=head2;
+		while (t!=null){
+		    System.out.print(t.val+",");
+		    t=t.next;
+		}
 		while (head!=null && head2!=null){
 			p=head.next;
 			q=head2.next;
