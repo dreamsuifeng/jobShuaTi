@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class kmpAlgorithm {
 	public static int[] next(char[] t) { 
-		t=Arrays.copyOf(t, t.length+1);
-		t[t.length-1]='#';
+//		t=Arrays.copyOf(t, t.length+1);
+//		t[t.length-1]='#';
 		
         int[] next = new int[t.length];  
         next[0] = -1;  
@@ -79,7 +79,11 @@ public class kmpAlgorithm {
 		
 		char[] t="abcddeabcabcabc".toCharArray();
 		char[] cs="abc".toCharArray();
-		System.out.println(KMP_Index(t, cs));
+		int[] a=next("abcabc".toCharArray());
+		for (int i : a) {
+			System.out.print(i+",");
+		}
+//		System.out.println(next(cs));
 //		System.out.println(cs);
 		}
 	}
