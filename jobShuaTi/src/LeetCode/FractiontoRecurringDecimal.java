@@ -41,7 +41,8 @@ public class FractiontoRecurringDecimal {
 	        return res.toString();
 	    }
 	 public static void main(String[] args){
-		 System.out.println(fractionToDecimal(1, 7));
+//		 System.out.println(fractionToDecimal(1, 7));
+		 System.out.println((char)(90));
 	 }
 	}
 
