@@ -15,10 +15,21 @@ public class ExcelSheetColumnTitle {
         }
         return res;
     }
+	public static int titleToNumber(String s) {
+        int res=0;
+        int n=s.length();
+        int step=1;
+        for (int i=n-1;i>=0;--i){
+        	res+=((int)s.charAt(i)-64)*step;
+        	step*=26;
+        }
+        return res;
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(convertToTitle(100));
-//		System.out.println((char)(26+64));
+		
+		System.out.println(titleToNumber("AAAA"));
+		
 	}
 
 }
