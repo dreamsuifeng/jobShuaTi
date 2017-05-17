@@ -30,12 +30,13 @@ public class ReorderList {
 	public ListNode reverse(ListNode head){
 		if (head==null || head.next==null) return head;
 		ListNode p=head,q=head.next,tmp=null;
+		p.next=null;
 		while (q!=null){
-			p.next=q.next;
+		    tmp=q.next;
 			q.next=p;
-			tmp=q;
-			q=p.next;
-			p=tmp;
+			p=q;
+			q=tmp;
+			
 		}
 		return p;
 	}
