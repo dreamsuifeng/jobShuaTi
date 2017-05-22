@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import javax.xml.transform.Templates;
-
 public class CombinationSumIII {
 	private List<List<Integer>> res=new ArrayList<>();
 	private Set<Integer> set=new HashSet<>();
