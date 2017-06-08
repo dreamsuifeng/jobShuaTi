@@ -26,8 +26,10 @@ public class AliInterview {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.print(isTrue(")"));
-
+		System.out.println(Integer.toBinaryString(-6));
+		System.out.println(Integer.toBinaryString(6));
+		
+		
 	}
 
 }

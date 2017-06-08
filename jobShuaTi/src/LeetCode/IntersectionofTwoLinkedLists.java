@@ -16,7 +16,6 @@ public class IntersectionofTwoLinkedLists {
         while (p!=null){
         	p=p.next;
         	lenA++;
-        	
         }
         p=headB;
         while (p!=null){
