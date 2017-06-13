@@ -27,37 +27,24 @@ public class kmpAlgorithm {
         }  
         return next;  
     }  
-	public static int KMP_Index(char[] s, char[] t) {
-		int result=0;
-        int[] next = next(t);
-//        System.out.println(t);
+	public static int KMP_Index(char[] s, char[] t) {  
+        int[] next = next(t);  
         int i = 0;  
-        int j = 0; 
-        int outindex=0;
+        int j = 0;  
         while (i <= s.length - 1 && j <= t.length - 1) {  
             if (j == -1 || s[i] == t[j]) {  
                 i++;  
                 j++;  
             } else {  
                 j = next[j];  
-            }
-            if (j==t.length) {
-				result+=1;
-//				i=i-t.length+1;
-				j=next[t.length];
-			}
+            }  
         }  
-//        if (j < t.length) {  
-//            return result;  
-//        } else  {
-//            result+=1; 
-//        	}
-//       i=i-t.length+1;
-//       outindex=i;
-//       j=0;
-	        
-		return result; 
-	}
+        if (j < t.length) {  
+            return -1;  
+        } else  
+            return i - t.length; // 返回模式串在主串中的头下标  
+    }  
+	
 	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
 //		@SuppressWarnings("resource")
@@ -76,14 +63,14 @@ public class kmpAlgorithm {
 //			}
 //			
 //			}
-		
+	
 		char[] t="abcddeabcabcabc".toCharArray();
 		char[] cs="abc".toCharArray();
 		int[] a=next("abcabc".toCharArray());
-		for (int i : a) {
-			System.out.print(i+",");
-		}
-//		System.out.println(next(cs));
+//		for (int i : a) {
+//			System.out.print(i+",");
+//		}
+		System.out.println(KMP_Index(t, cs));
 //		System.out.println(cs);
 		}
 	}
