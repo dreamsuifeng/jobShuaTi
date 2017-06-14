@@ -18,28 +18,30 @@ public class PalindromePairs336 {
         if (i==j || i==j+1) return true;
         else return false;
     }
-//    public List<List<Integer>> palindromePairs(String[] words) {
-//        int n=words.length;
-//        List<List<Integer>> res= new LinkedList<List<Integer>>();
-//        for (int i=0;i<n;++i){
-//            for (int j=i+1;j<n;++j){
-//                if (isTrue(words[i]+words[j])){
-//                    res.add(Arrays.asList(i,j));
-//                    if (words[i].length()==words[j].length()){
-//                    	res.add(Arrays.asList(j,i));
-//                    }
-//                }
-//                if(isTrue(words[j]+words[j])){
-//            	res.add(Arrays.asList(j,i));
-//            }
-//        }
-//        }
-//        return res;
-//    }
+    public List<List<Integer>> palindromePairs(String[] words) {
+        int n=words.length;
+        List<List<Integer>> res= new LinkedList<List<Integer>>();
+        for (int i=0;i<n;++i){
+            for (int j=i+1;j<n;++j){
+                if (isTrue(words[i]+words[j])){
+                    res.add(Arrays.asList(i,j));
+                    if (words[i].length()==words[j].length()){
+                    	res.add(Arrays.asList(j,i));
+                    }
+                }
+                if(words[i].length()!=words[j].length() && isTrue(words[j]+words[i])){
+                	res.add(Arrays.asList(j,i));
+            }
+        }
+        }
+        return res;
+    }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		PalindromePairs336 t=new PalindromePairs336();
-		System.out.println(t.isTrue("s"+"abcd"));
+//		System.out.println(t.isTrue("s"+"abcd"));
+		String[] teStrings={"abcd", "dcba", "lls", "s", "sssll"};
+		System.out.println(t.palindromePairs(teStrings));
 //		System.out.println(Arrays.asList(1,2));
 	}
 

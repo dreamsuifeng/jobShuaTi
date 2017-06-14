@@ -8,30 +8,27 @@ import java.util.Set;
 public class codeM4 {
 	public static String solve(int[] a, int[] b, int n, int i, String tmp, Set<Integer> exindex){
 		if (i==n-1) return tmp;
-		if (i>=n || i<0) return  "“No solution!”";
-		if (exindex.contains(i)) return "“Infinity!”";
-		String tmp1="“No solution!”";
+		if (i>=n || i<0) return  "No solution!";
+		if (exindex.contains(i)) return "Infinity!";
+		String tmp1="No solution!";
 		exindex.add(i);
 		if (a[i]!=0){
 			
 			tmp1=solve(a, b, n, i+a[i], tmp+"a", exindex);
 //			exindex.remove(i);
 		}
-		if (!tmp1.equals("“No solution!”")){
+		if (!tmp1.equals("No solution!") && !tmp1.equals("Infinity!")){
 			return tmp1;
 		}else{
 			
-			String tmp2="“No solution!”";
+			String tmp2="No solution!";
 			if(b[i]!=0){
-//				exindex.add(i);
+				exindex.add(i);
 				tmp2=solve(a, b, n, i+b[i], tmp+"b", exindex);
 				exindex.remove(i);
 			}
-			if (!tmp2.equals("“No solution!”")){
-				return tmp2;
-			}else{
-				return "“No solution!”";
-			}
+            
+			return tmp2;
 		}
 	
 	
