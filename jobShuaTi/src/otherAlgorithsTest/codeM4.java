@@ -14,6 +14,7 @@ public class codeM4 {
 		if (i>=n || i<0) return  false;
 		if (exindex.contains(i)) return false;
 		exindex.add(i);
+
 		if (a[i]!=0 ){
 			boolean t=solve(res,a, b, n, i+a[i], exindex);
 			if (t){
