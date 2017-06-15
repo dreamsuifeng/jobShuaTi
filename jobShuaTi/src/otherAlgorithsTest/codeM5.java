@@ -8,17 +8,15 @@ public class codeM5 {
 	public static int[] solve(int l, int r){
 		int[] res=new int[9];
 		res[0]=r-l+1;
-		System.out.println(1+","+res[0]);
+//		System.out.println(1+","+res[0]);
 		for (int i=2;i<=r;++i){
 			int count=0;
 			if (i>=l){
-				count=(r-i)/i+1;
+				count=r/i;
 			}else{
-				int diff=l%i==0 ? l:l+i-l%i;
-				if (diff>r) count=0;
-				else count=(r-diff)/i+1;
+				count=(r-l+l%i)/i+(l%i==0 ? 1:0);
 			}
-			System.out.println(i+","+count);
+//			System.out.println(i+","+count);
 			int index=i/(int)Math.pow(10, (int)Math.log10(i));
 			res[index-1]+=count;
 		}
@@ -45,6 +43,32 @@ public class codeM5 {
         }
 		return res;
 	}
+	public static int[] solve2(int l, int r){
+		int[] res=new int[9];
+		for (int i=1;i<=9;++i){
+			int count=0;
+			int j=i;
+			int step=1;
+			while(j<=r){
+				int k=j;
+				int front=Math.min(j+step-1, r);
+				while(k<=front && k>0){
+					if (k>=l){
+						count+=r/k;
+					}else{
+						count+=((r-l+l%k)/k)+(l%k==0 ? 1:0);
+					}
+					k++;
+				}
+				step*=10;
+				j=i*step;
+				
+			}
+			res[i-1]+=count;
+		}
+		 return res;
+		
+	}
 	public static void main(String[] args){
         Scanner in=new Scanner(System.in);
         int l=in.nextInt();
@@ -53,7 +77,8 @@ public class codeM5 {
 //        int[] res2=solve1(l, r);
        
         for (int i=0;i<9;++i){
-            System.out.print(res[i]+"\n");
+//            System.out.print(res[i]+" "+res2[i]+"\n");
+        	System.out.println(res[i]);
         }
     }
 }

@@ -32,7 +32,11 @@ public class TestListPara {
 	    public static void main(String[] args){
 	    	String[][] teStrings={{"JFK","SFO"},{"JFK","ATL"},{"SFO","ATL"},{"ATL","JFK"},{"ATL","SFO"}};
 	    	TestListPara testListPara=new TestListPara();
-	    	System.out.println(testListPara.findItinerary(teStrings).toString());
+//	    	
+//	    	System.out.println(testListPara.findItinerary(teStrings).toString());
+	    	int i=1000000000;
+	    	i+=10;
+	    	System.out.println(i);
 	    }
 	
 }
