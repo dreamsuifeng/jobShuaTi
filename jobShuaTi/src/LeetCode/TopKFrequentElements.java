@@ -1,19 +1,21 @@
 package LeetCode;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Set;
 
 public class TopKFrequentElements {
 	public List<Integer> topKFrequent(int[] nums, int k) {
 		if (nums==null || nums.length==0) return null;
         Map<Integer, Integer> map=new HashMap<>();
-//        for (int i:nums){
-//        	map.compute(i, (ke,v)->(v==null) ? 1:v+1);
-//        }
+        for (int i:nums){
+        	map.compute(i, (ke,v)->(v==null) ? 1:v+1);
+        }
         for (int i:nums){
         	if (map.containsKey(i)){
         		map.put(i, map.get(i)+1);
