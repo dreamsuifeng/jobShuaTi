@@ -64,7 +64,7 @@ public class kmpAlgorithm {
 //			
 //			}
 	
-		char[] t="abcddeabcabcabc".toCharArray();
+		char[] t="bcddeabcabcabc".toCharArray();
 		char[] cs="abc".toCharArray();
 		int[] a=next("abcabc".toCharArray());
 //		for (int i : a) {

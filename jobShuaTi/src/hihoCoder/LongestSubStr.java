@@ -3,9 +3,9 @@ package hihoCoder;
 public class LongestSubStr {
 	
 	public static void main(String[] args){
-		String s1="Sit it out G";
+		String s1="SititoutG";
 				
-		String s2="Sit down and shut up";
+		String s2="Sitdownandshutup";
 		LongestSubStr obj=new LongestSubStr();
 		System.out.println(obj.LongestSub(s1,s2));
 	}
