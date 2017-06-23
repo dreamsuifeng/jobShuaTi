@@ -5,31 +5,35 @@ import java.util.Scanner;
 public class CodeA3 {
 	public static String[] solve(int n, int T, int C,int[] t,int[] c, int maxT, int minT,long all,long call){
 		String[] res=new String[2];
-        if (T==minT || T==maxT) {
-            res[0]="Impossible";
-        }else if (T <minT){
+        if (T <minT){
 			double finalc=0.0;
 			for (int i=0;i<n;++i){
-				finalc+=(t[i]*c[i]-minT*c[i])/(minT-T);
+				finalc+=(t[i]*c[i]-minT*c[i])/(double)(minT-T);
 			}
+//			System.out.println(finalc);
 			if (finalc>C){
 				res[0]="Impossible";
 			}else{
 				res[0]="Possible";
 				res[1]=String.format("%.4f", (double)minT);
 			}
-		}else{
-            double finalC=0.0;
-            for (int i=0;i<n;++i){
-				finalC+=(t[i]*c[i]-maxT*c[i])/(maxT-T);
-			}
-            if (finalC>C){
+		}else if (T>maxT){
+			double tmp=((double)((long)T*(long)C+all))/(double)(call+C);
+//			System.out.println(tmp);
+            if (tmp<maxT){
                 res[0]="Impossible";
             }else{
                 res[0]="Possible";
-                double tmp=((double)(T*C+all))/(double)(call+C);
                 res[1]=String.format("%.4f",tmp);
             }
+		}
+		else{
+			if ((T==maxT || T==minT)&& maxT!=minT){
+				res[0]="Impossible";
+			}else{
+				res[0]="Possible";
+				res[1]=String.format("%.4f", (double)minT);
+			}
 		}
 		return res;
 		
@@ -57,6 +61,7 @@ public class CodeA3 {
 			all+=t[i]*c[i];
 			call+=c[i];
 		}
+//		System.out.println(minT+","+maxT);
 		if (minT<T && maxT>T){
 //			System.out.println(1);
 			System.out.println("Impossible");
