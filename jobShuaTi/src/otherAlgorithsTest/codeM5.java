@@ -100,15 +100,16 @@ public class codeM5 {
 	}
 
 	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);
-		long l = in.nextLong();
-		long r = in.nextLong();
-		long[] res = solve3(l, r);
-//		int[] res2 = solve1(l, r);
-
-		for (int i = 0; i < 9; ++i) {
-//			System.out.print(res[i] + " " + res2[i] + "\n");
-			 System.out.println(res[i]);
-		}
+//		Scanner in = new Scanner(System.in);
+//		long l = in.nextLong();
+//		long r = in.nextLong();
+//		long[] res = solve3(l, r);
+////		int[] res2 = solve1(l, r);
+//
+//		for (int i = 0; i < 9; ++i) {
+////			System.out.print(res[i] + " " + res2[i] + "\n");
+//			 System.out.println(res[i]);
+//		}
+		System.out.println(Integer.toString(16, 16));
 	}
 }
