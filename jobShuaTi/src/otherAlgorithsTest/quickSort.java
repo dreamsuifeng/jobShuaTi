@@ -16,7 +16,7 @@ public class quickSort {
             }  
         }  
         if((i+1) != end){  
-            array[i+1] = array[i+1]^array[end];  
+            array[i+1] = array[i+1]^array[end];
             array[end] = array[i+1]^array[end];  
             array[i+1] = array[i+1]^array[end];  
         }  

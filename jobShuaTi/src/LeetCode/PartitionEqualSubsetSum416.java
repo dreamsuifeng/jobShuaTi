@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PartitionEqualSubsetSum416 {
@@ -26,7 +27,7 @@ public class PartitionEqualSubsetSum416 {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		ArrayList<Integer> list=new ArrayList<>();
 	}
 
 }

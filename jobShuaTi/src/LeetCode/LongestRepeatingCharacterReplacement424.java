@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class LongestRepeatingCharacterReplacement424 {
-	public int characterReplacement(String s, int k) {
+	public static int characterReplacement(String s, int k) {
 		int len = s.length();
         int[] count = new int[26];
         int start = 0, maxCount = 0, maxLength = 0;
@@ -22,7 +22,7 @@ public class LongestRepeatingCharacterReplacement424 {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println(characterReplacement("ABAB", 2));
 	}
 
 }
