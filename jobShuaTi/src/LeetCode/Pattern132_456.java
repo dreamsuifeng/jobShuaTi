@@ -24,5 +24,5 @@ public class Pattern132_456 {
         	}
         }
         return false;
-    }
+    }	
 }
