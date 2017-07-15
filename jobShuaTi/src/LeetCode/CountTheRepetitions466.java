@@ -18,7 +18,7 @@ public class CountTheRepetitions466 {
         	}else{
         		i=(i+1)%t1.length();
         		m++;
-        	}
+        	} 
         	if (i==0 && j==0) break;
         }
         System.out.println(m+","+n);
