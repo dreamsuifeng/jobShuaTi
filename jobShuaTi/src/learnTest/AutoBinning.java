@@ -1,5 +1,7 @@
 package learnTest;
 
+import java.util.Vector;
+
 public class AutoBinning {
 
 	public static void main(String[] args) {
