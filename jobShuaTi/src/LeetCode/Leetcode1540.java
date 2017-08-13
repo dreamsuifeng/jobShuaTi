@@ -1,4 +1,4 @@
-package hihoCoder;
+package LeetCode;
 
 
 /*
