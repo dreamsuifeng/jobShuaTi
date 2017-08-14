@@ -6,11 +6,6 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
-import sun.reflect.generics.tree.Tree;
-import sun.tools.jar.resources.jar;
-
 public class Contest44_1 {
 	public class TreeNode {
 		      int val;

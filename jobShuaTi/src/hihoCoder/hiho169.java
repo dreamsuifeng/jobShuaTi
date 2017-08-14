@@ -53,13 +53,12 @@ public class hiho169 {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		System.out.println((long)Math.pow(2, 60));
-//		Scanner in=new Scanner(System.in);
-//		int n=in.nextInt();
-//		long x=in.nextLong();
-//		long y=in.nextLong();
-		System.out.println(new BigDecimal(Math.pow(2, 60)));
-		System.out.println(solve(1,1, 30));
+		Scanner in=new Scanner(System.in);
+		int n=in.nextInt();
+		long x=in.nextLong();
+		long y=in.nextLong();
+//		System.out.println(new BigDecimal(Math.pow(2, 60)));
+		System.out.println(solve(x,y, n));
 	}
 
 }
