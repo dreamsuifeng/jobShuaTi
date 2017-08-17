@@ -1,14 +1,11 @@
 package hihoCoder;
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.util.Scanner;
 
 
 
 public class hiho169 {
 	public static long solve(long x,long y, int n){
-//		System.out.println(x+","+y);
 		if (n<=1){
 			if (x==1 && y==1){
 				return 1;
@@ -57,7 +54,6 @@ public class hiho169 {
 		int n=in.nextInt();
 		long x=in.nextLong();
 		long y=in.nextLong();
-//		System.out.println(new BigDecimal(Math.pow(2, 60)));
 		System.out.println(solve(x,y, n));
 	}
 
