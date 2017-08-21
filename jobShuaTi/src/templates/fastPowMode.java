@@ -11,7 +11,7 @@ public class fastPowMode {
 		return r;
 	}
 	public static void main(String[] args){
-		System.out.println(fastPow(5, 4, 3));
-		System.out.println(Math.pow(5, 3));
+		System.out.println(fastPow(5, 10, 4));
+		System.out.println(Math.pow(5, 4));
 	}
 }
