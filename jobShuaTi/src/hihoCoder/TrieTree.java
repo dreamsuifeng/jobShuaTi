@@ -3,6 +3,7 @@ package hihoCoder;
 import java.util.HashMap;
 import java.util.Scanner;
 
+
 public class TrieTree {
 	static class Trie{
 		private String[] array=null;
@@ -65,6 +66,8 @@ public class TrieTree {
 	}
 	public static void main(String[] args){
 		@SuppressWarnings("resource")
+		boolean t=new StringBuilder().append("abc").equals("abc");
+		System.out.println(t);
 		Scanner in=new Scanner(System.in);
 		while (in.hasNext()) {
 			int Words=in.nextInt();

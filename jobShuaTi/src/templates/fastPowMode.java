@@ -11,7 +11,10 @@ public class fastPowMode {
 		return r;
 	}
 	public static void main(String[] args){
-		System.out.println(fastPow(5, 10, 4));
-		System.out.println(Math.pow(5, 4));
+		long ans=0;
+		for (int i=1;i<=1111;i++){
+			ans=(ans+ans*i)%5;
+		}
+		System.out.println(ans);
 	}
 }

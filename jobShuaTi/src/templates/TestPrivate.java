@@ -1,6 +1,5 @@
 package templates;
 
-import java.awt.print.Printable;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
